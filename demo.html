@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="C:\Users\SIRI\Desktop\hi\style.css">
+<title>Pet care</title>
+</head>
+<body>
+
+
+<div class="slideshow-container">
+  <h1 style="color:#f2f2f2; background-color:#B7CADB"> Love Animals </h1>
+<div class="mySlides fade">
+
+  <img src="dog.jpg" >
+  <div class="text">Dogs do speak, but only to those who know how to listen</div>
+</div>
+
+<div class="mySlides fade">
+
+  <img src="cutecat.jpg" >
+  <div class="text">Time spent with cats is never wasted</div>
+</div>
+
+<div class="mySlides fade">
+
+  <img src="cutefish.jpg" >
+  <div class="text">Teach a Man To Fish, and You Feed Him for a Lifetime</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center; width:100%; height:100%">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<table>
+<th>
+  <h2 style="background-color: #B7CADB; width: 100%; height:100%"> Care our Pets </h2>
+</th>
+<tr>
+  <td>
+    <h3 style="background-color:#B7CADB; width: 50%; height:100%"> Dogs : </h3>
+  </td>
+  <td>
+    <h3 style="background-color:#B7CADB; width: 70%; height:100%"> Cats : </h3>
+  </td>
+    <td>
+      <h3 style="background-color:#B7CADB; width: 50%; height:100%" > Fish : </h3>
+    </td>
+
+
+  </tr>
+  <tr>
+    <td style="background-color:#B7CADB; width: 30%; height:40%">
+
+
+
+        <b>
+          COMMUNICATE WITH YOUR DOG AND DEVELOP A RELATIONSHIP.
+          Dogs are social creatures and they need to interact with their owner.
+          Quality time will help you get to know your dog and understand  particular needs that it might have,
+          as well enhance your ability to recognize early signs of an illness that could be developing.
+          In addition, time spent in developing a relationship will help prevent many undesirable behavioral patterns.
+        </b>
+
+         </td>
+         <td style="background-color:#B7CADB; width: 30%; height:40%" >
+
+
+
+             <b>
+               Environment is an important part of the health and wellbeing of your cat.
+               A favourable environment is one in which the cat can become safely socialised without too many problems,
+                and that helps them get used to the people and the things around them.
+                When you first bring your cat home, you will need the basics.
+                These include:
+                <ol>
+                 <li>
+                  Baskets
+                 </li>
+               <li>
+                  Litter boxes
+               </li>
+                <li>
+                   Water bowls
+                </li>
+                 <li>
+                    Food bowls
+                 </li>
+                 <li>
+                    A cat tree
+                 </li>
+
+                </ol>
+
+             </b>
+
+
+
+         </td>
+         <td style="background-color:#B7CADB; width: 30%; height:40%">
+
+
+
+             <b>
+               One of the most important aspects of caring for a fish is ensuring it has sufficient space.
+               According to the experts at Fishkeeping World, bigger is better when it comes to fish tanks.
+               A large aquarium not only ensures your fish has ample room to swim, explore and grow, but it is also easier for you to maintain.
+               Keeping the temperature and pH balanced is easier with a large tank than with a small one.
+
+             </b>
+
+
+
+         </td>
+  </tr>
+
+
+
+
+</table>
+</body>
+</html>
